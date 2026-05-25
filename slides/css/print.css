@@ -1,0 +1,38 @@
+/* PDF出力用調整（Chrome 印刷 + ?print-pdf 用） */
+
+@media print {
+  .reveal .footer {
+    font-size: 7pt;
+  }
+  .reveal .slide-number {
+    font-size: 9pt;
+  }
+  /* 各セクションがページをまたがないように */
+  .reveal .slides section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Print PDF mode（reveal.js が body に .print-pdf を付ける） */
+.print-pdf .reveal .footer {
+  font-size: 9pt;
+}
+
+.print-pdf .reveal .slide-divider {
+  background: var(--psc-navy) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.print-pdf .reveal table th {
+  background: var(--psc-navy) !important;
+  color: #FFFFFF !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.print-pdf .reveal table tr:nth-child(even) td {
+  background: var(--psc-bg-soft) !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

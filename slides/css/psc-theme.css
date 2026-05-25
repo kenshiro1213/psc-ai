@@ -1,0 +1,353 @@
+/* =====================================================
+   PSC AI Consulting Slides — Custom Theme
+   Based on PS Construction (https://www.psc.co.jp/) palette
+   ===================================================== */
+
+:root {
+  --psc-navy: #0A3D62;
+  --psc-navy-dark: #062840;
+  --psc-blue: #1E6FBA;
+  --psc-bg: #FFFFFF;
+  --psc-bg-soft: #F5F7FA;
+  --psc-text: #1A1A1A;
+  --psc-text-muted: #555555;
+  --psc-divider: #E0E5EC;
+  --psc-accent-warm: #C8932A;
+}
+
+/* --- Base --- */
+.reveal {
+  font-family: "Noto Sans JP", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN", sans-serif;
+  font-size: 28px;
+  color: var(--psc-text);
+  font-weight: 400;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  padding: 48px 64px 72px 64px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Headings --- */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: "Noto Sans JP", "游ゴシック", "Yu Gothic", sans-serif;
+  color: var(--psc-navy);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.reveal h1 { font-size: 2.2em; margin-bottom: 0.4em; }
+.reveal h2 { font-size: 1.6em; margin-bottom: 0.5em; line-height: 1.3; }
+.reveal h3 { font-size: 1.2em; margin-bottom: 0.4em; }
+.reveal h4 { font-size: 1.0em; color: var(--psc-navy-dark); margin-bottom: 0.3em; }
+
+/* --- Paragraphs / Lists --- */
+.reveal p { line-height: 1.6; margin: 0.4em 0; }
+.reveal ul, .reveal ol { margin: 0.4em 0 0.4em 1.4em; }
+.reveal li { line-height: 1.65; margin: 0.15em 0; }
+.reveal strong { color: var(--psc-navy); font-weight: 700; }
+.reveal em { color: var(--psc-text-muted); font-style: normal; }
+
+/* --- Links --- */
+.reveal a { color: var(--psc-blue); text-decoration: none; }
+.reveal a:hover { color: var(--psc-navy-dark); text-decoration: underline; }
+
+/* --- Tables --- */
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5em 0;
+  font-size: 0.78em;
+}
+.reveal table th,
+.reveal table td {
+  border: 1px solid var(--psc-divider);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.45;
+}
+.reveal table th {
+  background: var(--psc-navy);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.reveal table tr:nth-child(even) td {
+  background: var(--psc-bg-soft);
+}
+
+/* --- Code --- */
+.reveal code {
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  background: var(--psc-bg-soft);
+  color: var(--psc-navy-dark);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.reveal pre {
+  background: var(--psc-bg-soft);
+  border-left: 4px solid var(--psc-navy);
+  padding: 12px 16px;
+  font-size: 0.72em;
+  margin: 0.4em 0;
+  box-shadow: none;
+}
+
+/* --- Block quote / Note box --- */
+.reveal blockquote,
+.reveal .note {
+  background: var(--psc-bg-soft);
+  border-left: 4px solid var(--psc-accent-warm);
+  padding: 12px 18px;
+  margin: 0.5em 0;
+  font-style: normal;
+  color: var(--psc-text);
+  font-size: 0.9em;
+}
+
+/* --- Divider line --- */
+.reveal hr {
+  border: 0;
+  border-top: 2px solid var(--psc-divider);
+  margin: 0.6em 0;
+}
+
+/* =====================================================
+   Slide Layouts
+   ===================================================== */
+
+/* Cover slide */
+.slide-cover {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0F4F9 100%);
+}
+.slide-cover h1 {
+  font-size: 2.4em;
+  border-left: 8px solid var(--psc-navy);
+  padding-left: 24px;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+.slide-cover .subtitle {
+  color: var(--psc-text-muted);
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  padding-left: 32px;
+}
+.slide-cover .meta {
+  padding-left: 32px;
+  color: var(--psc-text-muted);
+  font-size: 0.85em;
+  line-height: 1.8;
+}
+.slide-cover .meta .company {
+  color: var(--psc-navy);
+  font-size: 1.2em;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.2em;
+}
+.slide-cover .cover-logo {
+  position: absolute;
+  bottom: 56px;
+  right: 56px;
+  width: 360px;
+  height: auto;
+  opacity: 1;
+}
+
+/* Section divider (扉) */
+.slide-divider {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--psc-navy);
+  color: #FFFFFF;
+}
+.slide-divider .step {
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-bottom: 0.4em;
+  padding-left: 24px;
+  border-left: 6px solid #FFFFFF;
+}
+.slide-divider h2 {
+  color: #FFFFFF;
+  font-size: 2.4em;
+  border: none;
+  padding-left: 24px;
+  border-left: 6px solid var(--psc-accent-warm);
+  margin: 0;
+  line-height: 1.3;
+}
+.slide-divider .lead {
+  color: #FFFFFF;
+  opacity: 0.85;
+  font-size: 1.05em;
+  margin-top: 1em;
+  padding-left: 30px;
+  max-width: 80%;
+}
+
+/* Standard content slide */
+.slide-content h2 {
+  border-bottom: 3px solid var(--psc-navy);
+  padding-bottom: 10px;
+  margin-bottom: 0.6em;
+}
+.slide-content .lead {
+  font-size: 1.05em;
+  color: var(--psc-text-muted);
+  margin-bottom: 0.6em;
+}
+
+/* Grid (2-column) layout */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 0.5em;
+}
+.cols .col {
+  background: var(--psc-bg-soft);
+  border-left: 4px solid var(--psc-navy);
+  padding: 16px 20px;
+  border-radius: 0 4px 4px 0;
+}
+.cols .col h3 {
+  margin-top: 0;
+  font-size: 1.05em;
+}
+.cols .col ul { margin-left: 1.2em; }
+
+/* Comparison table emphasis */
+.compare th {
+  text-align: center;
+}
+.compare td:first-child {
+  font-weight: 700;
+  background: var(--psc-bg-soft);
+  color: var(--psc-navy);
+}
+
+/* Chip / Badge */
+.chip {
+  display: inline-block;
+  background: var(--psc-navy);
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.chip.warm { background: var(--psc-accent-warm); }
+.chip.muted { background: var(--psc-text-muted); }
+.chip.blue { background: var(--psc-blue); }
+
+/* Highlight number */
+.bignum {
+  color: var(--psc-navy);
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0.4em 0;
+}
+.cards .card {
+  background: #FFFFFF;
+  border: 1px solid var(--psc-divider);
+  border-top: 4px solid var(--psc-navy);
+  padding: 16px 18px;
+  border-radius: 0 0 4px 4px;
+}
+.cards .card .num {
+  display: inline-block;
+  background: var(--psc-navy);
+  color: #FFFFFF;
+  width: 28px; height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.cards .card h3 { margin: 0 0 0.3em 0; font-size: 0.95em; }
+.cards .card p { font-size: 0.78em; line-height: 1.5; margin: 0; color: var(--psc-text-muted); }
+
+/* Footer */
+.reveal .footer {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  font-size: 0.55em;
+  color: var(--psc-text-muted);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+  pointer-events: none;
+  z-index: 5;
+}
+.reveal .footer .footer-logo {
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.reveal .footer .left,
+.reveal .footer .right { display: flex; align-items: center; gap: 6px; }
+.reveal .footer .right { color: var(--psc-navy); }
+
+/* Hide footer on cover and divider slides — toggled via JS by adding .is-bare to body */
+body.is-bare .reveal .footer {
+  display: none !important;
+}
+body.is-bare .reveal .slide-number {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Slide number override */
+.reveal .slide-number {
+  background: transparent;
+  color: var(--psc-text-muted);
+  font-size: 14px;
+  bottom: 18px;
+  right: 36px;
+}
+
+/* Controls (arrows) */
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-right {
+  color: var(--psc-navy);
+}
+
+/* Progress bar */
+.reveal .progress {
+  color: var(--psc-navy);
+  height: 4px;
+}

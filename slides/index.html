@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI活用のはじめかた | PSC様向け</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/psc-theme.css">
+<link rel="stylesheet" href="css/print.css">
+
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================
+     セクション1：表紙・自己紹介・本日のゴール（3枚）
+============================================================ -->
+
+<!-- 01. 表紙 -->
+<section class="slide-cover">
+  <h1>AI活用のはじめかた</h1>
+  <div class="subtitle">業務効率化に向けた現状把握と可能性</div>
+  <div class="meta">
+    <span class="company">株式会社ピーエス・コンストラクション 様</span>
+    2026年5月26日<br>
+    有限会社 滝元測量 / 滝元 賢士郎
+  </div>
+  <img class="cover-logo" src="assets/takimoto-logo.jpg" alt="滝元測量">
+</section>
+
+<!-- 02. 自己紹介 -->
+<section class="slide-content">
+  <h2>自己紹介</h2>
+  <div class="cols">
+    <div class="col">
+      <h3>滝元 賢士郎</h3>
+      <ul>
+        <li>有限会社 滝元測量</li>
+        <li>新卒からIT業界（NEC）</li>
+        <li>現職：<strong>自治体AIサービスのプロダクトマネージャー</strong></li>
+        <li>趣味：ゴルフ・ウイスキー</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>本日の立ち位置</h3>
+      <ul>
+        <li>AIを「魔法」ではなく「<strong>道具</strong>」として、現場で使える形でご提案</li>
+        <li>行政・公共領域でのAI実装知見が背景</li>
+        <li>建設業の業務フローに即した提案を心がけます</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 03. 本日のゴール -->
+<section class="slide-content">
+  <h2>本日のゴール（60分）</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>共通認識を持つ</h3>
+      <p>生成AIで「何ができて、何ができないか」を、難しい話なしで腹落ちさせる</p>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>現状を伺う</h3>
+      <p>PSC様の業務・データ・痛点を、業務フローでお話しいただく</p>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>具体イメージを持ち帰る</h3>
+      <p>実機デモで「自分の業務で使えそう」を体験</p>
+    </div>
+  </div>
+  <hr>
+  <p style="font-size: 0.85em; color: var(--psc-text-muted);"><strong>進め方：</strong>教育20% / ヒアリング40% / デモ40%。途中の質問・脱線は歓迎です。</p>
+</section>
+
+<!-- ============================================================
+     セクション2：AIオリエンテーション（11枚）
+============================================================ -->
+
+<!-- 04. (扉) 生成AIとは -->
+<section class="slide-divider">
+  <div class="step">SECTION 1</div>
+  <h2>生成AIとは</h2>
+  <div class="lead">得意・苦手を見極めて、過剰期待も過小評価もしないために</div>
+</section>
+
+<!-- 05. 生成AIで何ができる？ -->
+<section class="slide-content">
+  <h2>生成AIで何ができる？</h2>
+  <p class="lead">主な得意領域は6つ。建設業の業務にもそのまま使えます。</p>
+  <div class="cards">
+    <div class="card"><div class="num">A</div><h3>文章生成</h3><p>メール下書き、報告書のたたき台、議事録の整形</p></div>
+    <div class="card"><div class="num">B</div><h3>要約・分類</h3><p>長文資料の要点抽出、問い合わせの自動分類</p></div>
+    <div class="card"><div class="num">C</div><h3>構造化抽出</h3><p>PDF・Excelから表形式・JSONへ変換</p></div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="num">D</div><h3>翻訳・言い換え</h3><p>専門用語の平易化、海外資料の翻訳</p></div>
+    <div class="card"><div class="num">E</div><h3>コード生成</h3><p>Excel関数、簡単なスクリプト、SQL</p></div>
+    <div class="card"><div class="num">F</div><h3>画像生成</h3><p>パース・イメージ図のラフ案</p></div>
+  </div>
+</section>
+
+<!-- 06. 生成AIが苦手なこと -->
+<section class="slide-content">
+  <h2>生成AIが苦手なこと</h2>
+  <p class="lead">「できないこと」を知っておくことが、安全な活用の第一歩。</p>
+  <div class="cols">
+    <div class="col">
+      <h3>厳密な数値計算</h3>
+      <p>桁の大きな四則演算、複雑な構造計算 → 専用ツールに任せる</p>
+      <h3>最新情報</h3>
+      <p>学習時点以降の出来事は知らない → Web検索を併用</p>
+    </div>
+    <div class="col">
+      <h3>社内固有の文脈</h3>
+      <p>教えていないことは知らない → データを渡す or 整理しておく</p>
+      <h3 style="color: var(--psc-accent-warm);">ハルシネーション（嘘）</h3>
+      <p>もっともらしい嘘をつくことがある → <strong>必ず人間が確認</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- 07. 建設業に置き換えると -->
+<section class="slide-content">
+  <h2>建設業に置き換えると</h2>
+  <p class="lead">普段の業務でいちばん時間を取られている作業から考えてみると…</p>
+  <table>
+    <thead><tr><th style="width:32%;">業務シーン</th><th>AIの使い所</th></tr></thead>
+    <tbody>
+      <tr><td>議事録整理</td><td>決定事項・アクション・宿題を時系列で <strong>自動抽出</strong></td></tr>
+      <tr><td>仕様書・要綱書の読み込み</td><td>工種・数量・特記事項を <strong>構造化</strong>（社内シートのたたき台へ）</td></tr>
+      <tr><td>顧客対応メール</td><td>過去の類似事例を検索、返信文の <strong>下書き</strong></td></tr>
+      <tr><td>近隣説明会のQ&A</td><td>蓄積したQ&Aを <strong>パターン化</strong> し、想定質問集を生成</td></tr>
+      <tr><td>マニュアル整備</td><td>社内ナレッジから <strong>マニュアル骨子</strong> を起こす</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 08. (扉) AI導入前のデータ整理 -->
+<section class="slide-divider">
+  <div class="step">SECTION 2</div>
+  <h2>AI導入前の「データ整理」</h2>
+  <div class="lead">"Garbage In, Garbage Out" ── 整理されたデータほど、AIの効果は出ます</div>
+</section>
+
+<!-- 09. Garbage In, Garbage Out -->
+<section class="slide-content">
+  <h2>Garbage In, Garbage Out</h2>
+  <p class="lead">どんなに優秀なAIでも、入力データがバラバラだと力を発揮できません。</p>
+  <div class="cols">
+    <div class="col" style="border-left-color: var(--psc-accent-warm);">
+      <h3 style="color: var(--psc-accent-warm);">よくある状態（Before）</h3>
+      <ul>
+        <li>顧客情報が個人のOutlook／Excelに分散</li>
+        <li>案件資料が部署ごとにバラバラ</li>
+        <li>「最新版」「修正版」「最終版_2」が並ぶ</li>
+        <li>過去案件の検索性ゼロ</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>整理された状態（After）</h3>
+      <ul>
+        <li>AIで <strong>横断検索・自動引継ぎ</strong> ができる</li>
+        <li>ナレッジが個人から組織に移る</li>
+        <li>新人教育コスト・属人化リスクの低減</li>
+        <li>過去案件を <strong>新規提案の資産</strong> として再利用</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10. 建設業の典型課題 -->
+<section class="slide-content">
+  <h2>建設業の典型課題（裏返せば、AIで効くポイント）</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>属人化</h3>
+      <p>ベテランの暗黙知が個人に張り付いて、退職・異動で失われる</p>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>横断検索の困難</h3>
+      <p>「あの案件のあの話」が何分で見つかるか不明。資料が散在</p>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>過去案件の再利用不足</h3>
+      <p>類似案件があっても、毎回ゼロから資料・見積を作っている</p>
+    </div>
+  </div>
+  <p style="margin-top: 0.6em; font-size: 0.9em; color: var(--psc-text-muted);">→ 後半のヒアリングで、PSC様の現状をぜひお聞かせください。</p>
+</section>
+
+<!-- 11. (扉) AIに「任せる」使い方 -->
+<section class="slide-divider">
+  <div class="step">SECTION 3</div>
+  <h2>AIに「任せる」使い方</h2>
+  <div class="lead">「質問する」から、「任せる」へ ── いま広がっている新しい使い方</div>
+</section>
+
+<!-- 12. 「質問する」から「任せる」へ -->
+<section class="slide-content">
+  <h2>「質問する」から「任せる」へ</h2>
+  <p class="lead">ChatGPTやClaudeの <strong>もう一歩先</strong> の使い方が、急速に広まっています。</p>
+  <table class="compare">
+    <thead><tr><th></th><th>今までのAI（チャット）</th><th>これからのAI（任せる）</th></tr></thead>
+    <tbody>
+      <tr><td>資料の渡し方</td><td>人がコピペして貼り付け</td><td>AIが <strong>自分で</strong> 読みに行く</td></tr>
+      <tr><td>やり取りの形</td><td>1問1答（一往復）</td><td>「読む→まとめる→保存→送る」まで <strong>一気通貫</strong></td></tr>
+      <tr><td>段取りの主体</td><td>人が次の一手を考える</td><td>AIが <strong>段取りも自分で考える</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0.8em; font-size: 0.8em; color: var(--psc-text-muted);">※ 裏側の仕組みは「MCP」と呼ばれる規格ですが、用語は覚えていただかなくて大丈夫です。</p>
+</section>
+
+<!-- 13. 建設業での"任せる"3つの例 -->
+<section class="slide-content">
+  <h2>建設業での「任せる」3つの例</h2>
+  <p class="lead">後半のデモで、それぞれ実機でお見せします。</p>
+  <div class="cards">
+    <div class="card">
+      <div class="num">A</div>
+      <h3>顧客の引継ぎ</h3>
+      <p>「過去のメール・議事録を全部読んで、要望リストと未解決事項をまとめて」<br><span class="chip">Demo A</span></p>
+    </div>
+    <div class="card">
+      <div class="num">B</div>
+      <h3>仕様書→社内シート</h3>
+      <p>「この仕様書PDFを読んで、社内図説シートにまとめてExcelで保存」<br><span class="chip">Demo B</span></p>
+    </div>
+    <div class="card">
+      <div class="num">C</div>
+      <h3>裏で動く社員</h3>
+      <p>「毎週月曜、自治体公告を巡回して関心案件だけSlackで共有」<br><span class="chip">Demo C</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 14. 業界事例（事前質問×ゼネコン事例） -->
+<section class="slide-content">
+  <h2>業界事例（PSC様の事前質問 × ゼネコン事例）</h2>
+  <table>
+    <thead><tr><th style="width:32%;">PSC様の事前質問</th><th>同業他社の実装事例</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="chip muted">Q1・Q10</span> 顧客・案件管理／引継ぎ</td>
+        <td><strong>大成建設</strong>：ChatGPT Enterprise <strong>全社導入</strong> / <strong>清水建設</strong>：社内マニュアル・過去事例のRAGナレッジ基盤</td>
+      </tr>
+      <tr>
+        <td><span class="chip muted">Q2・Q3</span> 仕様書・図面→ドキュメント</td>
+        <td><strong>CONOC</strong>：見積ゼロ秒化AI（協力会社見積を集約、<strong>定型業務80%削減</strong>）/ <strong>KK Generation・アドバン</strong>：図面の自動拾い出し</td>
+      </tr>
+      <tr>
+        <td><span class="chip muted">Q4</span> 過去案件から概算見積</td>
+        <td><strong>竹中工務店</strong>：Tektome「過去竣工図検索AI」（3ヶ月実証で成果）</td>
+      </tr>
+      <tr>
+        <td><span class="chip muted">Q5</span> 計画図面の自動生成</td>
+        <td><strong>竹中工務店</strong>：データセンター特化設計支援（<strong>数ヶ月 → 2〜3週間</strong>、3D画像自動生成）</td>
+      </tr>
+      <tr>
+        <td><span class="chip muted">Q12</span> 自治体発注情報の収集</td>
+        <td><strong>鹿島建設×青森県</strong>：橋梁点検AI「BMStar_AI」（<strong>自治体協業の好例</strong>）</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0.5em; font-size: 0.7em; color: var(--psc-text-muted);">出典：各社プレスリリース等の公開情報</p>
+</section>
+
+<!-- ============================================================
+     セクション3：セキュリティ解説（4枚）
+============================================================ -->
+
+<!-- 15. (扉) 安全に使うために -->
+<section class="slide-divider">
+  <div class="step">SECTION 4</div>
+  <h2>安全に使うために</h2>
+  <div class="lead">「便利だから使いたい」と「機密が漏れたら困る」は両立できます</div>
+</section>
+
+<!-- 16. プラン別 学習リスク -->
+<section class="slide-content">
+  <h2>プラン別：入力データが学習に使われるか</h2>
+  <table>
+    <thead><tr><th style="width:38%;">プラン</th><th style="width:30%;">入力データの学習利用</th><th>推奨用途</th></tr></thead>
+    <tbody>
+      <tr><td>ChatGPT Free / Plus</td><td><span class="chip warm">対象</span>（オプトアウト可）</td><td>個人・機密なし</td></tr>
+      <tr><td>ChatGPT Team / Enterprise</td><td><span class="chip blue">対象外</span></td><td><strong>法人利用の標準</strong></td></tr>
+      <tr><td>Claude Free / Pro</td><td><span class="chip blue">対象外</span></td><td>個人利用</td></tr>
+      <tr><td><strong>Claude for Work</strong>（Team / Enterprise）</td><td><span class="chip blue">対象外</span></td><td><strong>法人利用の標準</strong></td></tr>
+      <tr><td>OpenAI API / Anthropic API（直接利用）</td><td><span class="chip blue">対象外</span></td><td>開発・自動化</td></tr>
+      <tr><td>Gemini（個人）</td><td><span class="chip warm">対象になり得る</span></td><td>個人利用</td></tr>
+      <tr><td>Microsoft 365 Copilot</td><td><span class="chip blue">対象外</span></td><td>Office連携</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 0.4em; font-size: 0.75em; color: var(--psc-text-muted);">※ 規約は頻繁に更新されます。導入時は各サービスの最新規約を確認してください。</p>
+</section>
+
+<!-- 17. インシデント事例 -->
+<section class="slide-content">
+  <h2>インシデント事例 / 建設業で守るべき情報</h2>
+  <div class="cols">
+    <div class="col" style="border-left-color: var(--psc-accent-warm);">
+      <h3 style="color: var(--psc-accent-warm);">インシデント事例</h3>
+      <ul>
+        <li><strong>サムスン電子（2023）</strong>：社員がChatGPT個人プランに社内コード・議事録を貼り付け → 機密漏洩 → 社内禁止に</li>
+        <li>国内事例：顧客問い合わせデータの社外流出</li>
+        <li>「入力した内容が他社の回答に出てくる」リスク</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>建設業で特に守るべき情報</h3>
+      <ul>
+        <li>入札情報（予定価格、入札戦略）</li>
+        <li>見積根拠（労務単価、外注先、利益率）</li>
+        <li>顧客要望・契約条件</li>
+        <li>図面・BIMデータ（設計知財）</li>
+        <li>近隣対応履歴（紛争リスク情報）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 18. 推奨される運用パターン -->
+<section class="slide-content">
+  <h2>推奨される運用パターン</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>個人レベルの最低限</h3>
+      <p>機密はそのまま貼らない／伏字に／オプトアウト設定</p>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>チーム・部署</h3>
+      <p><strong>法人プラン</strong>に統一／管理者ユーザー管理／部署内ガイドライン</p>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>全社ガバナンス</h3>
+      <p>法人契約／データ分類／利用ガイドライン／ログ監査／教育</p>
+    </div>
+  </div>
+  <hr>
+  <p style="font-size: 0.95em;"><strong>守りすぎて何もしない／無防備に使う、どちらも経営リスク。</strong><br>正しいプランと正しいルールで、<strong>攻めながら守れます。</strong></p>
+</section>
+
+<!-- ============================================================
+     セクション4：現状ヒアリング（扉のみ1枚）
+============================================================ -->
+
+<!-- 19. (扉) 現状をお聞かせください -->
+<section class="slide-divider">
+  <div class="step">SECTION 5</div>
+  <h2>現状をお聞かせください</h2>
+  <div class="lead">業務フロー・データの実態・痛点を伺います（約24分）</div>
+</section>
+
+<!-- ============================================================
+     セクション5：デモ（扉のみ1枚）
+============================================================ -->
+
+<!-- 20. (扉) AIを実際に動かしてみる -->
+<section class="slide-divider">
+  <div class="step">SECTION 6</div>
+  <h2>AIを実際に動かしてみる</h2>
+  <div class="lead">3つのデモを実機でお見せします（約18分）<br>※すべて<strong>ダミーデータ</strong>で実施します</div>
+</section>
+
+<!-- ============================================================
+     セクション6：クロージング（1枚）
+============================================================ -->
+
+<!-- 21. クロージング -->
+<section class="slide-content">
+  <h2>本日のテイクアウェイ／次のステップ</h2>
+  <div class="cols">
+    <div class="col">
+      <h3>3つのテイクアウェイ</h3>
+      <ol>
+        <li>AIは万能ではないが、<strong>たたき台作成・要約・抽出</strong>は劇的に速い</li>
+        <li><strong>データ整理</strong>がAI活用の土台。整理されたデータほど効果が出る</li>
+        <li>チャットだけでなく、<strong>AIに任せる</strong>使い方で業務フローまるごと自動化が可能</li>
+      </ol>
+    </div>
+    <div class="col">
+      <h3>次のステップ（ご提案）</h3>
+      <ul>
+        <li><strong>PoC候補1〜2件</strong>を共同で選定</li>
+        <li><strong>データ整理アセスメント</strong>（1〜2週間）</li>
+        <li>次回MTGの日程調整（2〜3週間後）</li>
+      </ul>
+      <hr>
+      <p style="font-size: 0.85em;">本日のスライドはPDF版を後日お送りします。<br>ご質問・追加ヒアリングはお気軽に。</p>
+    </div>
+  </div>
+</section>
+
+</div><!-- /.slides -->
+
+
+<!-- Common Footer (rendered into each slide via JS) -->
+<div class="footer" id="page-footer">
+  <div class="left">
+    <img class="footer-logo" src="assets/takimoto-logo.jpg" alt="">
+    有限会社 滝元測量
+  </div>
+  <div class="right">
+    AI活用のはじめかた / PSC様向け
+  </div>
+</div>
+
+</div><!-- /.reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 800,
+    margin: 0.04,
+    minScale: 0.5,
+    maxScale: 1.5,
+    controls: true,
+    progress: true,
+    slideNumber: 'c/t',
+    hash: true,
+    history: true,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    pdfSeparateFragments: false,
+  });
+
+  // 扉・表紙スライドではフッターを隠す（背景色がコンテンツに被るため）
+  function updateBareMode() {
+    const curr = Reveal.getCurrentSlide();
+    if (!curr) return;
+    const bare = curr.classList.contains('slide-divider') || curr.classList.contains('slide-cover');
+    document.body.classList.toggle('is-bare', bare);
+  }
+  Reveal.on('ready', updateBareMode);
+  Reveal.on('slidechanged', updateBareMode);
+
+  // PDF出力モード（?print-pdf）では、全ページに対してクラスを判定して切り替える
+  // reveal.js の print-pdf モードでは1スライド=1ページとして並ぶため、
+  // 各セクションを直接スキャンしてフッターを per-slide に出し分け
+  if (window.location.search.match(/print-pdf/gi)) {
+    document.addEventListener('DOMContentLoaded', () => {
+      // 既存の単一フッターを取り除く
+      const original = document.getElementById('page-footer');
+      if (!original) return;
+      const originalHTML = original.outerHTML;
+      original.remove();
+      // 各スライドに個別にフッターを挿入（扉/表紙以外）
+      setTimeout(() => {
+        document.querySelectorAll('.reveal .slides > section').forEach(sec => {
+          if (sec.classList.contains('slide-divider') || sec.classList.contains('slide-cover')) return;
+          sec.insertAdjacentHTML('beforeend', originalHTML);
+        });
+      }, 300);
+    });
+  }
+</script>
+
+</body>
+</html>
